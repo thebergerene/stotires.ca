@@ -1,4 +1,4 @@
-#  Ottawa Tire Storage
+#  Ottawa -  Tire Storage
 
 A small PHP + MySQL site for a 6-month tire storage service: a landing page with
 three storage packages, a pickup/delivery date selector split across three
