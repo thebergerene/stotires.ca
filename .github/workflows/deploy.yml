@@ -1,21 +1,9 @@
-
-yamlname: Deploy Website
+name: Deploy
 on:
   push:
-    branches:
-      - main
-jobs:
-  deploy:
+    branches: [ main ]
+jobs: # Ensure this is not indented
+  deploy-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: SFTP Deploy
-        uses: sftp-deploy-actions/sftp-deploy@v1
-        with:
-          username: 'your_server_username'
-          server: 'your_server_ip_or_domain'
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          local_path: './*'
-          remote_path: '/var/www/html/' # Your web server path
+      - uses: actions/checkout@v4
